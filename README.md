@@ -17,7 +17,7 @@ To see what packets get blocked, run `sudo ./voodoo.sh log`.
 
 To find more information about how to write firewall rules for Open BSD packet-filter, run `man pf.conf`
 
-For more information, read the introduction article: [http://www.sarfata.org/posts/secure-your-mac.html]
+For more information, read the introduction article: http://www.sarfata.org/posts/secure-your-mac.html
 
 ## The VPN
 
@@ -51,11 +51,11 @@ This should also work on other types of OS but I have not tried yet.
 * Click on Advanced Settings, select "Send all traffic" and click ok.
 * If you are also using voodoo firewall, update the VPN server address at the top of the script and re-run it to allow VPN traffic to go through to your server.
 * Click Connect, it should take a few seconds and you should be online.
-* Ask google '[what is my ip address?][https://www.google.com/search?q=what+is+my+ip+address]', you should see the IP address of your Amazon EC2 box
+* Ask google about your IP address: https://www.google.com/search?q=what+is+my+ip+address, you should see the IP address of your Amazon EC2 box
 
 ### For more information
 
-For more explaination and help debugging, read my initial blog post about this: [http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.html]
+For more explaination and help debugging, read my initial blog post about this: http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.html
 
 ## License
 
