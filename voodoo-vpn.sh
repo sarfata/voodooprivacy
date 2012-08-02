@@ -3,7 +3,7 @@
 # voodoo-vpn.sh: Amazon EC2 user-data file for automatic configuration of a VPN
 # on a Ubuntu server instance. Tested with 12.04.
 #
-# See http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.html
+# See http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
 #
 # DO NOT RUN THIS SCRIPT ON YOUR MAC! THIS IS MEANT TO BE RUN WHEN 
 # YOUR AMAZON INSTANCE STARTS!

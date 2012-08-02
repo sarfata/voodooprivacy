@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.html
+# http://www.sarfata.org/posts/secure-your-mac.md
 #
 # Copyright Thomas Sarlandie 2012
 #
