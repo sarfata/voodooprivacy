@@ -17,7 +17,7 @@ To see what packets get blocked, run `sudo ./voodoo.sh log`.
 
 To find more information about how to write firewall rules for Open BSD packet-filter, run `man pf.conf`
 
-For more information, read the introduction article: http://www.sarfata.org/posts/secure-your-mac.html
+For more information, read the introduction article: http://www.sarfata.org/posts/secure-your-mac.md
 
 ## The VPN
 
@@ -55,7 +55,7 @@ This should also work on other types of OS but I have not tried yet.
 
 ### For more information
 
-For more explaination and help debugging, read my initial blog post about this: http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.html
+For more explaination and help debugging, read my initial blog post about this: http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
 
 ## License
 
