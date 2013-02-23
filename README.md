@@ -57,6 +57,13 @@ This should also work on other types of OS but I have not tried yet.
 
 For more explaination and help debugging, read my initial blog post about this: http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
 
+### Compatibility with other OSs
+
+#### Windows 8
+
+Paul Tromans writes (in the comments on my blog):
+> To get this working with the built-in VPN client in Windows 8 I had to apply the registry tweak described here: http://support.microsoft.com/kb/926179/en-us. If anyone finds a better way to do this, then please post in the comments. 
+
 ## License
 
 Copyright Thomas Sarlandie 2012
