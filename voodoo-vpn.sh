@@ -16,6 +16,11 @@
 # Attribution required: please include my name in any derivative and let me
 # know how you have improved it! 
 
+if [[ "`uname`" == "Darwin" ]]; then
+    echo "Do not run this script on your mac! This script should only be run on a newly-created EC2 instance, after you have modified it to set the three variables below."
+    exit 1
+fi
+
 # Please define your own values for those variables
 IPSEC_PSK=very_unsecure_key
 VPN_USER=johndoe
