@@ -101,7 +101,7 @@ sys.stdout.write(u"Creating EC2 instance")
 reservation = ec2.run_instances(image_id=image_id,
                                 key_name=key_name,
                                 instance_type='t1.micro',
-                                security_groups=[voodoovpngroup_name,'default'],
+                                security_groups=[voodoovpngroup_name],
                                 user_data=user_data)
 
 instance = reservation.instances[0]
