@@ -30,7 +30,7 @@ Voodoo privacy also makes it very easy to set up a secure VPN gateway on Amazon 
 ** It might be helpful to add a rule to allow SSH but you dont really need it. I like to limit SSH login from my home/office IP but if you are really brave you can let everyone find your SSH.
 * Change the default value for the three variables `IPSEC_PSK`, `VPN_USER` and `VPN_PASSWORD` at the top of launch script and copy everything into your clipboard.
 * In amazon console Click on Instances -> Launch Instance -> Classic Wizard -> Ubuntu 12.04 -> 1 micro instance.
-** In the user data field, past the launch script you have just adapted.
+** In the user data field, paste the launch script you have just adapted.
 ** Select your keypair
 ** Select the security group you created earlier
 ** Give the machine a name
