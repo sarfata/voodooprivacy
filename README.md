@@ -23,7 +23,7 @@ For more information, read the introduction article: http://www.sarfata.org/post
 
 Voodoo privacy also makes it very easy to set up a secure VPN gateway on Amazon EC2.
 
-### Setting up the VPN gateway
+### Setting up the VPN gateway (option 1: manually)
 
 * Create a new security group (EC2 Management interface -> Security groups) 
 ** Allow traffic to TCP port 500, and UDP ports 500 and 4500. 
@@ -37,6 +37,13 @@ Voodoo privacy also makes it very easy to set up a secure VPN gateway on Amazon 
 * Click launch
 
 And that's it! Your server is now ready to accept connection from your mac. Get the public DNS name of your new server and resolve it to an IP address. You will need it in the next step.
+
+### Setting up the VPN gateway (option 2: automatically)
+
+* ensure you have the python module "boto" installed, for communicating with AWS. (You can install it globally with `sudo pip install boto`, or locally by following the instructiosn in pyenv/.)
+* within `create-voodoo-vpn.py`, set the region_name to your desired AWS region, e.g., us-west-1.
+* set your AWS credentials either in environmental variables, in ~/.boto, or in create-voodoo-vpn.py
+* run  `create-voodoo-vpn.py`
 
 ### Configure the VPN on your Mac
 
