@@ -84,5 +84,9 @@ Attribution required: please include my name in any derivative and let me know h
 
 Voodoo Privacy was born during Defcon XX to protect my very own privacy. The name comes from the rooftop bar of the Rio hotel where the conference was held.
 
+## Contributors
+
+- [Thomas Sarlandie](https://github.com/sarfata)
+- [Alexis Gallagher](https://github.com/algal)
 
 
