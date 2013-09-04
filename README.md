@@ -23,20 +23,27 @@ For more information, read the introduction article: http://www.sarfata.org/post
 
 Voodoo privacy also makes it very easy to set up a secure VPN gateway on Amazon EC2.
 
-### Setting up the VPN gateway
+### Setting up the VPN gateway (option 1: manually)
 
 * Create a new security group (EC2 Management interface -> Security groups) 
 ** Allow traffic to TCP port 500, and UDP ports 500 and 4500. 
 ** It might be helpful to add a rule to allow SSH but you dont really need it. I like to limit SSH login from my home/office IP but if you are really brave you can let everyone find your SSH.
 * Change the default value for the three variables `IPSEC_PSK`, `VPN_USER` and `VPN_PASSWORD` at the top of launch script and copy everything into your clipboard.
 * In amazon console Click on Instances -> Launch Instance -> Classic Wizard -> Ubuntu 12.04 -> 1 micro instance.
-** In the user data field, past the launch script you have just adapted.
+** In the user data field, paste the launch script you have just adapted.
 ** Select your keypair
 ** Select the security group you created earlier
 ** Give the machine a name
 * Click launch
 
 And that's it! Your server is now ready to accept connection from your mac. Get the public DNS name of your new server and resolve it to an IP address. You will need it in the next step.
+
+### Setting up the VPN gateway (option 2: automatically)
+
+* ensure you have the python module "boto" installed, for communicating with AWS. (You can install it globally with `sudo pip install boto`, or locally by following the instructiosn in pyenv/.)
+* within `create-voodoo-vpn.py`, set the region_name to your desired AWS region, e.g., us-west-1.
+* set your AWS credentials either in environmental variables, in ~/.boto, or in create-voodoo-vpn.py
+* run  `create-voodoo-vpn.py`
 
 ### Configure the VPN on your Mac
 
@@ -77,5 +84,9 @@ Attribution required: please include my name in any derivative and let me know h
 
 Voodoo Privacy was born during Defcon XX to protect my very own privacy. The name comes from the rooftop bar of the Rio hotel where the conference was held.
 
+## Contributors
+
+- [Thomas Sarlandie](https://github.com/sarfata)
+- [Alexis Gallagher](https://github.com/algal)
 
 

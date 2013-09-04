@@ -16,6 +16,11 @@
 # Attribution required: please include my name in any derivative and let me
 # know how you have improved it! 
 
+if [[ "`uname`" == "Darwin" ]]; then
+    echo "Do not run this script on your mac! This script should only be run on a newly-created EC2 instance, after you have modified it to set the three variables below."
+    exit 1
+fi
+
 # Please define your own values for those variables
 IPSEC_PSK=very_unsecure_key
 VPN_USER=johndoe
@@ -23,7 +28,7 @@ VPN_PASSWORD=unsecure
 
 # Those two variables will be found automatically
 PRIVATE_IP=`wget -q -O - 'http://instance-data/latest/meta-data/local-ipv4'`
-PUBLIC_IP=`wget -q -O - 'http://instance-data/latest/meta-data/public-ipv4'`
+PUBLIC_IP=`wget -q -O - 'http://instance-data/latest/meta-data/public-hostname'`
 
 apt-get install -y openswan xl2tpd
 
