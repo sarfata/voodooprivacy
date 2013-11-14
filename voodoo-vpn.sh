@@ -125,6 +125,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 exit 0
 EOF
 
+chmod a+x /etc/network/if-pre-up.d/iptablesload
+
 /etc/init.d/ipsec restart
 /etc/init.d/xl2tpd restart
-
