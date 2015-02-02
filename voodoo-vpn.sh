@@ -27,8 +27,8 @@ VPN_USER=johndoe
 VPN_PASSWORD=unsecure
 
 # Those two variables will be found automatically
-PRIVATE_IP=`wget -q -O - 'http://instance-data/latest/meta-data/local-ipv4'`
-PUBLIC_IP=`wget -q -O - 'http://instance-data/latest/meta-data/public-hostname'`
+PRIVATE_IP=`wget -q -O - 'http://169.254.169.254/latest/meta-data/local-ipv4'`
+PUBLIC_IP=`wget -q -O - 'http://169.254.169.254/latest/meta-data/public-ipv4'`
 
 apt-get install -y openswan xl2tpd
 
