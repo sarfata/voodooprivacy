@@ -3,6 +3,16 @@ Voodoo Privacy
 
 Protect your computer from unsecure environment with a very strict firewall and a strong VPN through Amazon EC2.
 
+
+## Update - July 2016
+
+Thanks for your interest in this project! [Lin
+Song](https://www.linkedin.com/in/linsongui) has built a newer version which is
+tested with 2016 releases of Ubuntu/Debian/CentOS/RHEL and includes VPN setup
+instructions for a lot more platforms. [It is available under the same license
+here.](https://github.com/hwdsl2/setup-ipsec-vpn).
+
+
 ## The firewall
 
 Voodoo privacy firewall gives you absolute control over your computer firewall so that you can control very precisely what is allowed in your computer, but also what is allowed out of your computer. This is very useful to protect your privacy, because it will allow you to block all broadcast packets that your computer might send when you turn it on.
