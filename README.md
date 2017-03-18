@@ -10,7 +10,7 @@ Thanks for your interest in this project! [Lin
 Song](https://www.linkedin.com/in/linsongui) has built a newer version which is
 tested with 2016 releases of Ubuntu/Debian/CentOS/RHEL and includes VPN setup
 instructions for a lot more platforms. [It is available under the same license
-here.](https://github.com/hwdsl2/setup-ipsec-vpn).
+here](https://github.com/hwdsl2/setup-ipsec-vpn).
 
 
 ## The firewall
@@ -25,9 +25,9 @@ To get back to Apple default settings, run `sudo ./voodoo.sh safe`.
 
 To see what packets get blocked, run `sudo ./voodoo.sh log`.
 
-To find more information about how to write firewall rules for Open BSD packet-filter, run `man pf.conf`
+To find more information about how to write firewall rules for Open BSD packet-filter, run `man pf.conf`.
 
-For more information, read the introduction article: http://www.sarfata.org/posts/secure-your-mac.md
+For more information, read the introduction article: http://www.sarfata.org/posts/secure-your-mac.md.
 
 ## The VPN
 
@@ -36,43 +36,43 @@ Voodoo privacy also makes it very easy to set up a secure VPN gateway on Amazon 
 ### Setting up the VPN gateway (option 1: manually)
 
 * Create a new security group (EC2 Management interface -> Security groups) 
-** Allow traffic to TCP port 500, and UDP ports 500 and 4500. 
-** It might be helpful to add a rule to allow SSH but you dont really need it. I like to limit SSH login from my home/office IP but if you are really brave you can let everyone find your SSH.
+  * Allow traffic to TCP port 500, and UDP ports 500 and 4500. 
+  * It might be helpful to add a rule to allow SSH but you dont really need it. I like to limit SSH login from my home/office IP but if you are really brave you can let everyone find your SSH.
 * Change the default value for the three variables `IPSEC_PSK`, `VPN_USER` and `VPN_PASSWORD` at the top of launch script and copy everything into your clipboard.
 * In amazon console Click on Instances -> Launch Instance -> Classic Wizard -> Ubuntu 12.04 -> 1 micro instance.
-** In the user data field, paste the launch script you have just adapted.
-** Select your keypair
-** Select the security group you created earlier
-** Give the machine a name
-* Click launch
+  * In the user data field, paste the launch script you have just adapted.
+  * Select your keypair.
+  * Select the security group you created earlier.
+  * Give the machine a name.
+* Click launch.
 
 And that's it! Your server is now ready to accept connection from your mac. Get the public DNS name of your new server and resolve it to an IP address. You will need it in the next step.
 
 ### Setting up the VPN gateway (option 2: automatically)
 
-* ensure you have the python module "boto" installed, for communicating with AWS. (You can install it globally with `sudo pip install boto`, or locally by following the instructiosn in pyenv/.)
-* within `create-voodoo-vpn.py`, set the region_name to your desired AWS region, e.g., us-west-1.
-* set your AWS credentials either in environmental variables, in ~/.boto, or in create-voodoo-vpn.py
-* run  `create-voodoo-vpn.py`
+* Ensure you have the python module "boto" installed, for communicating with AWS. (You can install it globally with `sudo pip install boto`, or locally by following the instructiosn in pyenv/.)
+* Within `create-voodoo-vpn.py`, set the region_name to your desired AWS region, e.g., us-west-1.
+* Set your AWS credentials either in environmental variables, in `~/.boto`, or in `create-voodoo-vpn.py`.
+* Run  `create-voodoo-vpn.py`.
 
 ### Configure the VPN on your Mac
 
 This should also work on other types of OS but I have not tried yet.
 
-* Open your network settings
-* Click on the "+" button in the top-left corner of the interfaces list
-* Select a VPN interface, with 'IPSec L2TP' and give it a name
-* In the address field, put the public IP of your server (you can get from the amazon console)
+* Open your network settings.
+* Click on the "+" button in the top-left corner of the interfaces list.
+* Select a VPN interface, with 'IPSec L2TP' and give it a name.
+* In the address field, put the public IP of your server (you can get from the amazon console).
 * In the account name field, put the value of the `VPN_USER` variable that you defined earlier.
 * Click on auth settings, fill your `VPN_PASSWORD` in the first field and your `IPSEC_PSK` in the second box. Click Ok
 * Click on Advanced Settings, select "Send all traffic" and click ok.
 * If you are also using voodoo firewall, update the VPN server address at the top of the script and re-run it to allow VPN traffic to go through to your server.
 * Click Connect, it should take a few seconds and you should be online.
-* Ask google about your IP address: https://www.google.com/search?q=what+is+my+ip+address, you should see the IP address of your Amazon EC2 box
+* Ask google about your IP address: https://www.google.com/search?q=what+is+my+ip+address, you should see the IP address of your Amazon EC2 box.
 
 ### For more information
 
-For more explaination and help debugging, read my initial blog post about this: http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
+For more explaination and help debugging, read my initial blog post about this: http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md.
 
 ### Compatibility with other OSs
 
@@ -86,7 +86,7 @@ Paul Tromans writes (in the comments on my blog):
 Copyright Thomas Sarlandie 2012
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
-Unported License: http://creativecommons.org/licenses/by-sa/3.0/
+Unported License: http://creativecommons.org/licenses/by-sa/3.0/.
 
 Attribution required: please include my name in any derivative and let me know how you have improved it!
 
