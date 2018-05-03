@@ -30,7 +30,7 @@ VPN_PASSWORD=unsecure
 PRIVATE_IP=`wget -q -O - 'http://169.254.169.254/latest/meta-data/local-ipv4'`
 PUBLIC_IP=`wget -q -O - 'http://169.254.169.254/latest/meta-data/public-ipv4'`
 
-apt-get install -y openswan xl2tpd
+apt-get install -y strongswan xl2tpd
 
 cat > /etc/ipsec.conf <<EOF
 version 2.0
@@ -127,5 +127,5 @@ EOF
 
 chmod a+x /etc/network/if-pre-up.d/iptablesload
 
-/etc/init.d/ipsec restart
+ipsec restart
 /etc/init.d/xl2tpd restart
